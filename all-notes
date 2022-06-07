@@ -1,0 +1,260 @@
+ 
+Summation:   zcat PPAS-BCLEAR_REASON_2019* | grep "Not Available,50," | awk -F, 'BEGIN {sum=0;OFMT="%.0f"}{sum=sum+$8} END{print sum}'
+
+find . -name "*" -type f -print0 | xargs -0 rm
+
+cat file1 file2 file2 | sort | uniq -c | grep "  2"
+
+Class Module:
+/opt/mediation/appl/SERVER/CXC1737979_R5A/lib/compiled
+
+VVVBash scripts:
+/var/opt/mediation/MMStorage/Working/PGW/IN/PGW14/
+Search lines with empty fields: awk -F, '!$5' file
+
+ethtool eth2
+
+/RAIDdata/UC/PGW/LOCAL/in/
+password: root123
+
+For CCN GT
+/opt/telorb/axe/tsp/ss7/cnf/config
+
+OCC logs:
+/opt/occ/var/log
+
+Search .gz files for a pattern:
+ find -name \*.gz -print0 | xargs -0 zgrep "602022048608067"
+
+Oracle passwd: Medi@tion_Or@cle_P@ssw0rd_123!
+
+DB Resources Check:
+
+PSQL -U mmsuper -h 172.30.147.200 -p 5455 
+show max_connections;
+
+/bin/mv `ls -larth  | grep "    0 Oct " | awk '{print $9}'` ZeroSize/ 
+
+Renaming paatern after a character:
+
+for i in `ls`; do src=$i; dst=`echo $i | awk -F'#' '{print $1}'`;mv $src $dst;done
+
+nested loop search:
+---------------------
+
+for k in `ls -l | grep '^d' | grep Voice_CCN | grep -v Voice_CCN6B | awk '{print $9}'`; 
+do for i in `ls $k/080920`; do
+j=`zcat $k/080920/$i |strings | grep 1022517391 |wc -l` ; if [ $j -gt 0 ]; then echo $i; fi ; done;
+done; 
+
+sequence_recovery:
+--------------------
+count=7300 ; for i in `ls MBC-MMBL2_2020*` ; do src=`echo $i` ; dst=`echo $i | awk -v count=$count -F '_' '{print $1"_"$2"_"$3"_"count}'` ; count=$((count +1)) ; mv $src $dst; done 
+
+Check Filed Seperator:
+for i in `ls MBC*`; do if [ `head -1 $i | sed 's/,,/Found!/g' | awk -F'!' {'print $1'} | grep 'Found'` = "Found" ];then mv $i /var/opt/mediation/MMStorage/Working/ODS/Mediation_CDRS/Big_data/;fi;done
+
+Dsikspace for larger than 1G:
+find / -xdev -type f -size +1000M -exec ls -la {} \; | sort -nk 5
+
+OGW Password: thule
+
+***OCC GUI Passwd: Sysadm@123
+OCC log PATH:  /opt/occ/var/log
+OCC ICP Version: /var/install/occ/log/history.log
+
+SAPC:
+ZHR] ssh 10.18.76.104 -l Yehya
+Password: Telorb_123456
+root passwd: Ericsson@422
+
+OCC1_10.30.165.2
+OCC2 10.30.165.3
+OCC3_172.21.165.2
+OCC4_172.21.165.3
+OCC5_172.28.165.2
+OCC6_172.28.165.3
+OCC7_10.21.96.2
+OCC8_10.28.96.2
+OCC9_10.204.171.7
+OCC10_10.204.171.8
+OCC11_10.30.165.4
+OCC12_10.18.33.122
+OCC13_10.22.96.2
+OCC14_10.30.120.2
+OCC15_10.30.120.42
+OCC16_10.28.7.58
+OCC17_10.22.76.10
+OCC18_10.21.9.138
+OCC19_10.205.21.162
+OCC24_10.18.66.2
+OCC25_10.18.66.42
+OCC26_10.18.66.82
+OCC27_10.18.66.122
+OCC28_10.18.66.162
+OCC29_10.18.66.202
+OCC33_10.204.86.86
+OCC34_10.205.70.2
+OCC35_10.205.70.58
+OCC36_10.205.70.30
+OCC38_10.205.70.118
+OCC39_10.205.70.154
+OCC48_10.21.8.2
+OCC49_10.21.8.30
+OCC50_10.21.8.58
+
+CCN21_172.21.10.72
+CCN22_172.28.14.104
+CCN23_172.28.14.103
+CCN24_172.18.10.1
+CCN25_172.21.10.73
+CCN26_172.30.9.158
+CCN27_172.30.9.156 
+CCN28_172.18.14.42
+CCN31_172.23.9.229
+CCN32_172.23.9.230
+CCN33_10.28.201.23
+CCN34_10.205.161.34
+
+DataCCN3_172.28.171.69
+DataCCN4_172.30.181.5
+DataCCN5_172.21.171.72
+DataCCN6_172.23.171.5
+DataCCN7_172.21.171.75
+DataCCN8_172.30.181.10
+DataCCN9_172.28.171.80
+DataCCN10_172.30.181.13
+DataCCN11_172.28.171.83
+--
+DataCCN12_172.21.171.78 SCAP
+DataCCN13_172.23.171.7   SCAP
+--
+DataCCN14_172.23.171.10
+DataCCN15_172.18.171.76
+DataCCN16_172.18.171.79
+DataCCN17_10.205.171.4
+DataCCN18_10.205.171.6
+DataCCN19_10.204.171.4
+
+ECCN1_172.18.37.128
+ECCN2_172.21.171.68
+ECCN3_172.18.10.56
+ECCN4_172.30.10.222
+
+***SDP73 (License Server IP): 10.30.201.21
+
+***SUF IP: 10.30.145.110
+
+ilo port :623
+***NGVS IP: 192.168.40.32
+
+
+Raouf machine: fdsuser@172.21.201.236
+, passwd: root123
+https://172.28.38.66/Toolbox/servlet/ToolboxGenerator
+(Pokemon1- BCX-Vodafone_2015)
+
+OCC Architecture:
+--------------------
+Alarms: cd /housekeeping/NewNemo/script.d
+
+CCNs Architecture:
+---------------------
+Proc_m0_s9#  telnet proc_m0_s1 8000
+$ /> cd CLI
+$ /CLI> cd Processors/
+
+scanrack to get the board info.
+
+nslookup  20106040925.8.msisdn.sub.cs 10.30.201.97 
+
+printalarms -d 2
+
+Payback Engine IP: 10.21.201.228
+
+SMS-Delivery:
+----------------
+/Backup/SDP/OUT_BKP/Promo_Engine/NewPAM
+
+-------------------------------------------------------------------------------
+
+RMD-HQ-EMM15 root
+psswd: Med_EMM15_123.
+RMD: 172.28.147.170
+
+V14YBadawy passwd:Voda3333
+
+/Backup/VOICE/Distarch3/Backup/CIPIP/Billing
+
+zgrep -i 1002582508 V*/180730/*
+/var/opt/mediation
+
+ for i in `ls *`; do j=`zcat $i |strings | grep 1019811448 |wc -l` ; if [ $j -gt 0 ]; then echo $i; fi ; done;
+
+old mediation Server3 username:root12
+password: RootMed123
+
+online mediation requests path: /var/opt/mediation/MMStorage/Manager/CXC1737977_R5A/statistics
+
+SMSC output Files path: /Backup/Call_Comp/OUT/BSCS/
+
+SMSC raw Files path:
+/Backup/Call_Comp/IN
+
+for f in *; do s="$(echo $f |awk -F"l_" '{print $2}')"; mv "$f" "$s" ;done;
+data CDRs /Backup/MBC_MI/Output
+
+User: bgw, passwd:Bgw@1234
+User: billing, passwd: 
+
+SMS CDRs Search
+zgrep 1033493498 V*/180705/* | grep -i T22 | more
+
+Replace for loop: for i in `ls *`; do sed -i -e 's/201001008710/201060409258/g' $i ; done;
+
+mmsuper --- Mmsuper_1234
+
+restart Manager(GUI):
+hagrp -offline Manager_grp -sys RMD-EMM_PHY-01
+
+
+zcat 2019013[0-1]/*PCR* |  grep ",20190130"  |awk -F, 'BEGIN {sum=0;OFMT="%.0f"}{sum=sum+$4} END{print sum}'
+
+Recharge MSISDN > 11
+--------------------------
+
+zcat ./20190630/*PCR*  ./2019070[0-9]/*PCR*  ./2019071[0-9]/*PCR*  ./2019072[0-8]/*PCR* | grep ",201907" | grep -v ",20190728" | awk -F, '{ if ( length($2) <  10 ) print $0 }'
+
+E/// Audit:
+
+ILO: root/changeme
+
+VOICE: 15 Oct , Nov and Dec
+DATA: Oct , Nov and Dec
+SCAPV2: Oct, Nov.
+SDP: Oct, Nov and Dec
+OCC: Oct /[handled by CCN_Data] Done - Nov [handled by OCC]
+
+SDP Credentials:
+upmuser/upmuser_123
+
+OCC CMDs:
+OCCs Roots Path: /etc/sysconfig/network-scripts/
+
+Chech OCC accumulated DRs:
+/bin/find /var/occ/cdr/working -name "CHARGINGCDR*" -mmin +60  | grep -iv rej | wc -l 
+
+After logging ILO hit (vsp)
+
+DCCN / dccn_123
+
+Lookup DB IP: 10.28.186.20
+ops/Ops@1234
+
+MTAS Backup Location:
+
+/Backup/IMS/MTAS/bkp/post/20200821
+
+TNS Name:
+
+The case ID is : 5346548190
