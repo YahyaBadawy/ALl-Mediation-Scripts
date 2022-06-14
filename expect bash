@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+
+spawn sftp -o StrictHostKeyChecking=no root@172.30.147.5
+
+    expect "word: "
+    send   "root123\r"
+    expect "sftp>"
+    send   "cd /var/opt/mediation/MMStorage/Server1/intercom\r"
+    expect "sftp>" 
+    send   "lcd /export/home/fdsuser/VASInvestigator\r"
+    expect "sftp>"
+    send   "put Intercom*\r"
+    expect "sftp>"          
+    
